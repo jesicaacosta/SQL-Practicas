@@ -112,7 +112,67 @@ select * FROM Artista;
 
 delete from Artista 
     where artistaID = 7;
-
 select * FROM Artista;
 
 
+UPDATE Artista 
+set pais = 'Inglaterra'
+WHERE pais = 'Reino Unido';
+select * FROM Artista;
+
+UPDATE Artista 
+set pais = 'Reino Unido'
+WHERE pais = 'Inglaterra';
+select * FROM Artista;
+
+
+UPDATE Artista 
+set pais = 'Inglaterra'
+WHERE pais = 'Reino Unido';
+select * FROM Artista;
+
+
+
+-- Consultar los países de los Artistas, sin repetidos.
+select pais FROM Artista GROUP BY pais;
+
+-- Mostrar los países de los Artistas, sin repetidos.
+select distinct pais FROM Artista;
+
+-- Devolver las primeras 5 canciones ordenadas por título de forma ascendente.
+select * from Canciones order by titulo asc limit 5;
+
+
+-- Consultar los artistas que son de Suecia.
+select * from Artista where pais = 'Suecia';
+
+
+-- Consultar los artistas que no tengan fecha de nacimiento. 
+select * from Artista where fechaNacimiento is null;
+select * from Artista where fechaNacimiento = '1970-04-10';
+select * from Artista where fechaNacimiento = ' ';
+
+
+select * from Artista ;
+
+-- Consultar títulos de los álbumes cuyo título tenga menos de 10 caracteres y se hayan lanzado después de 1980.
+select * from Album were 
+-- Mostrar título y género de las canciones cuyo título no empiece con la letra “b”.
+
+-- Contar la cantidad de canciones que son de género “Rock”.
+
+-- Contar cuántos artistas hay por país, y mostrar sólo aquellos países para los que haya más de un artista 
+
+-- Sumar la duración total de las canciones por género.
+
+-- Calcular el monto total de ventas por canción.
+
+-- Listar todos los álbumes de los artistas de Estado Unidos, ordenando por título de forma ascendente.
+
+-- Encontrar los títulos y géneros de las canciones de un artista en particular (“The Beatles”).
+
+-- Calcular el precio unitario promedio de las ventas.
+
+-- Mostrar el nombre de cada álbum y cuantas canciones tiene cada uno, ordenados por la cantidad de canciones en forma descendente.
+
+-- Mostrar los títulos de las canciones, con la fecha de venta y la cantidad, mostrando todas las canciones (hayan tenido o no ventas), y ordenado por la fecha de venta de manera descendente.
